@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 public class DeliveryItemAdapter extends RecyclerView.Adapter<DeliveryItemViewHolder> {
-    DeliveryItems[] items;
+    FoodDleveryItems[] items;
 
-    public DeliveryItemAdapter(DeliveryItems[] deliveryItems){
+    public DeliveryItemAdapter(FoodDleveryItems[] deliveryItems){
         items = deliveryItems;
     }
     @NonNull
@@ -26,7 +26,7 @@ public class DeliveryItemAdapter extends RecyclerView.Adapter<DeliveryItemViewHo
 
     @Override
     public void onBindViewHolder(@NonNull DeliveryItemViewHolder holder, int position) {
-        DeliveryItems item = items[position];
+        FoodDleveryItems item = items[position];
         holder.itemNameTxt.setText(item.itemName);
         holder.ratingTxt.setText(item.rating);
         Picasso.get().load(item.imageUrl).into(holder.imageIv);
